@@ -19,17 +19,22 @@ export default function Header() {
 
     return (
         <div className="fixed top-0 w-full h-[60px] bg-black border-b border-white/60 p-3 flex flex-row justify-between items-center z-50">
-            <Link href="/">
+            
+            <div>
+                <Link href="/">
                     <h2 className="text-xl font-bold">TxI</h2>
-            </Link>
-            {initialLoading && status === "loading" ? <BiLoaderCircle className="animate-spin" /> : 
+                </Link>
+            </div>
+            
+            <div className="flex flex-row space-x-4 ml-2">
+                {initialLoading && status === "loading" ? <BiLoaderCircle className="animate-spin" /> : 
                 !session ? (
                     <>
                         <div className="_menu">
                             <Link href="/signup"><Button>Signup</Button></Link>
                         </div>
                         <div className="_menu">
-                            <Button onClick={()=>signIn("google")}>Login</Button>
+                            <Link href="/api/auth/signin"><Button>SignIn</Button></Link>
                         </div>
                     </>                    
                 ) : (
@@ -49,7 +54,7 @@ export default function Header() {
                 )
             }
                 
-            
+            </div>            
         </div>
     )
 }
