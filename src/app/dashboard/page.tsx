@@ -48,10 +48,12 @@ export default function Dashboard() {
                 className="w-full mb-2 rounded"
               />
               <h2 className="font-semibold text-lg">{video.snippet.title}</h2>
-              <p className="text-sm text-gray-600 mb-1">
+              <div className='flex justify-between'>
+                 <p className="text-sm text-gray-600 mb-1">
                 {new Date(video.snippet.publishedAt).toLocaleDateString()}
               </p>
-              <p className="text-sm text-gray-600">
+              <div className='flex justify-end space-x-1'>
+                   <p className="text-sm text-gray-600">
                 {video.statistics?.viewCount
                   ? `${Number(video.statistics.viewCount).toLocaleString()} views`
                   : 'No views info'}
@@ -61,6 +63,8 @@ export default function Dashboard() {
                     ? `${Number(video.statistics.commentCount).toLocaleString()} comments`
                     : 'No comments'}
               </p>
+              </div> 
+              </div>
             </a>
           </div>
         ))}
