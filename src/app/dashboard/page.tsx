@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function Dashboard() {
@@ -42,10 +43,12 @@ export default function Dashboard() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <Image
                 src={video.snippet.thumbnails.medium.url}
                 alt={video.snippet.title}
                 className="w-full mb-2 rounded"
+                width={300}
+                height={300}
               />
               <h2 className="font-semibold text-lg">{video.snippet.title}</h2>
               <div className='flex justify-between'>

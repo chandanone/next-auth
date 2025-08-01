@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
 const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
 
@@ -30,10 +32,12 @@ export default async function YouTubeVideosPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {videos.map((video: any) => (
           <div key={video.id} className="shadow p-4 rounded-lg border">
-            <img
+            <Image
               src={video.snippet.thumbnails.medium.url}
               alt={video.snippet.title}
               className="w-full"
+              width={800}
+              height={800}
             />
             <h2 className="text-lg font-semibold mt-2">
               {video.snippet.title}
