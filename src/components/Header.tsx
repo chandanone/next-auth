@@ -36,6 +36,9 @@ export default function Header() {
                         <div className="_menu">
                             <Link href="/api/auth/signin"><Button>SignIn</Button></Link>
                         </div>
+                        <div className="_menu">
+                            <Link href="/projects"><Button>Projects</Button></Link>
+                        </div>
                     </>                    
                 ) : (
                     <>

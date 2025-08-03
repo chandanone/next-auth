@@ -3,8 +3,25 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
+
+type Video = {
+  id: { videoId: string };
+  snippet: {
+    title: string;
+    thumbnails: {
+      medium: {
+        url: string;
+      };
+    };
+  };
+  statistics?: {
+    viewCount?: string;
+  };
+};
+
+
 export default function Dashboard() {
-  const [videos, setVideos] = useState<any[]>([]);
+  const [videos, setVideos] = useState<Video[]>([]);
   const [error, setError] = useState<string | null>(null);
 
  useEffect(() => {

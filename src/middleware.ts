@@ -5,7 +5,11 @@ export async function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
 
   // Define public paths that are accessible without a token
-  const isPublicPath = path === "/login" || path === "/signup" || path === "/";
+  const isPublicPath =
+    path === "/api/auth/signin" ||
+    path === "/signup" ||
+    path === "/projects" ||
+    path === "/";
 
   // Use getToken to decode the NextAuth.js JWT cookie
   const token = await getToken({
@@ -20,7 +24,9 @@ export async function middleware(request: NextRequest) {
 
   // 2. Redirect unauthenticated users from protected pages to the login page
   if (!isPublicPath && !token) {
-    return NextResponse.redirect(new URL("/login", request.nextUrl.origin));
+    return NextResponse.redirect(
+      new URL("/api/auth/signin", request.nextUrl.origin)
+    );
   }
 
   // 3. Allow the request to proceed if no redirect is needed

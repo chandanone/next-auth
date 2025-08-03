@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="w-full h-dvh flex justify-center items-center">
-      <div className="flex justify-center items-center flex-col">
+    <div className="w-full h-dvh flex justify-center items-center bg-linear-500 from-purple-200 to-pink-500">
+      <div className="flex justify-center items-center flex-col gap-2">
         <motion.h1
           initial={{
             opacity: 0,
@@ -21,7 +21,7 @@ export default function Home() {
           transition={{ duration: 0.35, delay: 0 }}
           className="text-4xl sm:text-6xl font-bold"
         >
-          TxI
+          Amigos Alpha Labs
         </motion.h1>
         <motion.p
           initial={{
@@ -35,9 +35,9 @@ export default function Home() {
             filter: "blur(0px)",
           }}
           transition={{ duration: 0.35, delay: 0.35 }}
-          className="text-center text-white/50"
+          className="text-center text-black font-bolder"
         >
-          SignUp and Generate stunning images from text using AI models for free
+          Empowering businesses through innovative software consulting and stunning website design.
         </motion.p>
         <motion.div
           initial={{
@@ -53,7 +53,7 @@ export default function Home() {
           transition={{ duration: 0.35, delay: 0.7 }}
         >
           <Link href="/create">
-            <Button className=" mt-3 font-bold p-5">Start Creating</Button>
+            <Button className=" mt-3 font-bold p-5 bg-primary-300 border-black border-2 text-black hover:bg-white">Start Creating</Button>
           </Link>
         </motion.div>
       </div>
