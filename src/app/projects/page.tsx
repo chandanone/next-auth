@@ -8,56 +8,150 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 
 export default function Projects() {
   return (
-    <Card className="w-full h-full max-w-m p-26">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-between items-center py-18 px-2">
+      <Card className="w-full h-full max-w-sm">
       <CardHeader>
-        <CardTitle>Login to your account</CardTitle>
+        <CardTitle>EXPNext</CardTitle>
         <CardDescription>
-          Enter your email below to login to your account
+          Set up ERP in 1 minute
         </CardDescription>
         <CardAction>
-          <Button variant="link">Sign Up</Button>
+          <Button variant="link">Join ERPNext Now</Button>
         </CardAction>
       </CardHeader>
       <CardContent>
         <form>
-          <div className="flex flex-col gap-6">
+          <div className="flex justify-between gap-4">
             <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="m@example.com"
-                required
-              />
+              <h1>ALPHA LABS</h1>
             </div>
             <div className="grid gap-2">
               <div className="flex items-center">
-                <Label htmlFor="password">Password</Label>
-                <a
-                  href="#"
-                  className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-                >
-                  Forgot your password?
-                </a>
+                <h1>Projects Details</h1>
               </div>
-              <Input id="password" type="password" required />
             </div>
           </div>
         </form>
       </CardContent>
       <CardFooter className="flex-col gap-2">
-        <Button type="submit" className="w-full">
-          Login
-        </Button>
-        <Button variant="outline" className="w-full">
-          Login with Google
-        </Button>
+        <Button variant="link" >Join ASAP</Button>
       </CardFooter>
     </Card>
+    <Card className="w-full h-full max-w-sm">
+      <CardHeader>
+        <CardTitle>EXPNext</CardTitle>
+        <CardDescription>
+          Set up ERP in 1 minute
+        </CardDescription>
+        <CardAction>
+          <Button variant="link">Join ERPNext Now</Button>
+        </CardAction>
+      </CardHeader>
+      <CardContent>
+        <form>
+          <div className="flex justify-between gap-4">
+            <div className="grid gap-2">
+              <h1>ALPHA LABS</h1>
+            </div>
+            <div className="grid gap-2">
+              <div className="flex items-center">
+                <h1>Projects Details</h1>
+              </div>
+            </div>
+          </div>
+        </form>
+      </CardContent>
+      <CardFooter className="flex-col gap-2">
+        <Button variant="link" >Join ASAP</Button>
+      </CardFooter>
+    </Card>
+    <Card className="w-full h-full max-w-sm">
+      <CardHeader>
+        <CardTitle>EXPNext</CardTitle>
+        <CardDescription>
+          Set up ERP in 1 minute
+        </CardDescription>
+        <CardAction>
+          <Button variant="link">Join ERPNext Now</Button>
+        </CardAction>
+      </CardHeader>
+      <CardContent>
+        <form>
+          <div className="flex justify-between gap-4">
+            <div className="grid gap-2">
+              <h1>ALPHA LABS</h1>
+            </div>
+            <div className="grid gap-2">
+              <div className="flex items-center">
+                <h1>Projects Details</h1>
+              </div>
+            </div>
+          </div>
+        </form>
+      </CardContent>
+      <CardFooter className="flex-col gap-2">
+        <Button variant="link" >Join ASAP</Button>
+      </CardFooter>
+    </Card>
+    <Card className="w-full h-full max-w-sm">
+      <CardHeader>
+        <CardTitle>EXPNext</CardTitle>
+        <CardDescription>
+          Set up ERP in 1 minute
+        </CardDescription>
+        <CardAction>
+          <Button variant="link">Join ERPNext Now</Button>
+        </CardAction>
+      </CardHeader>
+      <CardContent>
+        <form>
+          <div className="flex justify-between gap-4">
+            <div className="grid gap-2">
+              <h1>ALPHA LABS</h1>
+            </div>
+            <div className="grid gap-2">
+              <div className="flex items-center">
+                <h1>Projects Details</h1>
+              </div>
+            </div>
+          </div>
+        </form>
+      </CardContent>
+      <CardFooter className="flex-col gap-2">
+        <Button variant="link" >Join ASAP</Button>
+      </CardFooter>
+    </Card>
+    <Card className="w-full h-full max-w-sm">
+      <CardHeader>
+        <CardTitle>EXPNext</CardTitle>
+        <CardDescription>
+          Set up ERP in 1 minute
+        </CardDescription>
+        <CardAction>
+          <Button variant="link">Join ERPNext Now</Button>
+        </CardAction>
+      </CardHeader>
+      <CardContent>
+        <form>
+          <div className="flex justify-between gap-4">
+            <div className="grid gap-2">
+              <h1>ALPHA LABS</h1>
+            </div>
+            <div className="grid gap-2">
+              <div className="flex items-center">
+                <h1>Projects Details</h1>
+              </div>
+            </div>
+          </div>
+        </form>
+      </CardContent>
+      <CardFooter className="flex-col gap-2">
+        <Button variant="link" >Join ASAP</Button>
+      </CardFooter>
+    </Card>
+    </div>
   )
 }

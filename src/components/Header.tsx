@@ -26,7 +26,7 @@ export default function Header() {
                 </Link>
             </div>
             
-            <div className="flex flex-row space-x-4 ml-2">
+            <div className="flex flex-row justify-center items-center space-x-4 ml-2">
                 {initialLoading && status === "loading" ? <BiLoaderCircle className="animate-spin" /> : 
                 !session ? (
                     <>
@@ -43,10 +43,13 @@ export default function Header() {
                 ) : (
                     <>
                     <div className="_menu">
+                            <Link href="/projects"><Button>Projects</Button></Link>
+                        </div>
+                    <div className="_menu">
                         <Button onClick={()=>signOut({ callbackUrl: "/" })}>Logout</Button>
                     </div>
                     
-                        <h1>{session.user?.email}</h1>
+                        <h1 className="text-white">{session.user?.email}</h1>
                     <Link href="/profile">
                         <Avatar>
                             <AvatarImage src={session.user?.image || ""} />

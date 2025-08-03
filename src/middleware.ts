@@ -17,10 +17,15 @@ export async function middleware(request: NextRequest) {
     secret: process.env.NEXTAUTH_SECRET,
   });
 
-  // 1. Redirect logged-in users from public pages (like /login) to the dashboard
-  if (isPublicPath && token) {
+  // Redirect logged-in users only from sign-in and sign-up pages
+  if ((path === "/api/auth/signin" || path === "/signup") && token) {
     return NextResponse.redirect(new URL("/dashboard", request.nextUrl.origin));
   }
+
+  // // 1. Redirect logged-in users from public pages (like /login) to the dashboard
+  // if (isPublicPath && token) {
+  //   return NextResponse.redirect(new URL("/dashboard", request.nextUrl.origin));
+  // }
 
   // 2. Redirect unauthenticated users from protected pages to the login page
   if (!isPublicPath && !token) {
